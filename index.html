@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/logo planet.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <title>PesonaEdu - Youth Creators Competion 2024</title>
+    </head>
+<body>
+    <!-- news content -->
+    <div class="news__content news__content1">
+        <div class="news__closeBtn" onclick="hideNews('news__content1')"><p>×</p></div>
+        <div class="newsContent">
+            <h5>Melting Ice Caps in The Arctic</h5>
+            <img src="img/news1.jpeg" alt="Image for 1st news" class="newsContent__img">
+            <div class="text">
+                <p>The Arctic just had its second-hottest year ever, and big changes are happening. A place that used to help slow climate change by trapping carbon in its frozen ground, called tundra, is now releasing huge amounts of carbon dioxide and methane as the permafrost melts. These gases trap heat, making the planet warm even faster.</p>
+                <p>Scientists from NOAA explained in their Arctic report card why this is happening. The Arctic is heating up two to four times faster than the rest of the world because of something called Arctic amplification. When snow and ice melt, they reveal darker surfaces like the ocean and bare ground, which soak up more heat instead of bouncing sunlight back into space. Plus, wind and ocean patterns are pushing even more heat to the Arctic. The past nine years have been the warmest there since 1900, and the changes are reshaping the region.</p>
+                <p>For starters, sea ice has shrunk by 50% since the 1980s, and last year it reached one of the smallest amounts ever recorded. At the same time, the tundra is becoming greener as more shrubs take over. Wildfires are also getting worse. In 2023, Arctic wildfires burned twice the usual area, releasing more carbon than Canada’s entire economy produces in a year. One fire even forced 19,000 people to leave their homes in Yellowknife, Canada.</p>
+                <p>The melting permafrost is a huge problem. It holds twice as much carbon as the Earth’s atmosphere, and now it’s letting that carbon escape. </p>
+                <p>Scientists warn that the Arctic is changing faster than ever and won’t be the same as it was just ten years ago. These changes don’t just affect the Arctic, but they raise sea levels, impact weather patterns, and disrupt ecosystems all over the world. It’s a clear sign that we need to fight climate change now.</p>
+                <h6><a href="https://www.nbcnews.com/science/climate-change/arctic-ice-melting-high-temperatures-fires-emissions-rcna183464">More info? Read here!</a></h6>
+            </div>
+        </div>
+    </div>
+    <div class="news__content news__content2">
+        <div class="news__closeBtn" onclick="hideNews('news__content2')"><p>×</p></div>
+        <div class="newsContent">
+            <h5>Food and Water Insecurity</h5>
+            <img src="img/news2.jpg" alt="Gambar Berita 2" class="newsContent__img">
+            <div class="text">
+                <p>Imagine the ground beneath our feet disappearing. Every year, around 68 billion tons of the top layer of soil is blown or washed away that it’s 100 times faster than nature can fix! This soil isn’t just dirt, it’s packed with nutrients plants need to grow. But because of farming methods like over-tilling, which breaks up the soil, it gets weak and crumbles away. The chemicals in the soil also pollute rivers and lakes, harming fish and plants.</p>
+                <p>At the same time, more people are going hungry. Right now, over 820 million people don’t get enough food, and by 2050, we’ll need 70% more food to feed nearly 9 billion people. But here’s a shocking fact: one-third of all food made gets wasted! That’s enough to feed 3 billion people. In rich countries, food is often thrown away because it doesn’t look perfect. In poorer countries, food goes bad because they don’t have the tools to store it.</p>
+                <p>Water is another big problem. Out of all the water on Earth, only a tiny, 3% bit is freshwater we can drink. Even worse, most of that is frozen in glaciers! Right now, more than 1 billion people don’t have clean water. By 2025, two-thirds of the world might face water shortages.</p>
+                <p>The UN’s António Guterres says we must act fast to save food, water, and soil. We can do this by farming smarter, wasting less, and taking care of rivers and lakes. If we don’t, the world will face bigger problems, and people everywhere will struggle to have enough to eat and drink.</p>
+            </div>
+            <h6><a href="https://earth.org/the-biggest-environmental-problems-of-our-lifetime/">More info? Read here!</a></h6>
+        </div>
+    </div>
+
+    <!-- games -->
+    <div class="game__content game__content1">
+        <div class="game__closeBtn" onclick="hideGame('game__content1')"><p>×</p></div>
+        <div class="gameContent">
+            <div id="quiz">
+                <h1>Trivia</h1>
+                <div id="question"></div>
+                <div id="options"></div>
+            </div>
+        </div>
+    </div>
+    <div class="game__content game__content2">
+        <div class="game__closeBtn" onclick="hideGame('game__content2')"><p>×</p></div>
+        <div class="gameContent">
+            <div id="game-container">
+                <div id="tutorial" class="hidden">
+                    <p><strong>How to Play:</strong></p>
+                    <p>Drag the trash into the correct bin:</p>
+                    <ul>
+                        <li><strong>Organic:</strong> 🍎, 🍌</li>
+                        <li><strong>Inorganic:</strong> 🧴, 🥤</li>
+                        <li><strong>Toxic:</strong> ☣️, 💉</li>
+                    </ul>
+                    <button id="start-button">Start Game</button>
+                </div>
+                <div id="game" class="hidden">
+                    <div id="scoreboard">
+                        <div id="score">Score: 0</div>
+                        <div id="high-score">High Score: 0</div>
+                        <div id="timer">Time Left: 30s</div>
+                    </div>
+                    <div id="trash-cans">
+                        <div class="trash-can" data-type="organic"><img src="img/organik/tong organik.png" alt="organic"></div>
+                        <div class="trash-can" data-type="inorganic"><img src="img/nonorganik/tong nonorganik.png" alt="inorganic"></div>
+                        <div class="trash-can" data-type="toxic"><img src="img/b3/tong b3.png" alt="toxic"></div>
+                    </div>
+                    <div id="trash-container"></div>
+                    <div id="timer"></div>
+                </div>
+                <div id="game-over" class="hidden">
+                    <h1>Game Over</h1>
+                    <p id="final-score"></p>
+                    <p id="high-score-final"></p>
+                    <button onclick="restartGame()">Restart</button>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <nav>
+        <div class="logo">
+            <img src="img/logo planet.png" alt="" data-light="img/logo planet.png" data-dark="img/logo planet.png">
+            <img src="img/logo name1.png" alt="" data-light="img/logo name1.png" data-dark="img/logo name2.png">
+        </div>
+        <div class="vline"></div>
+        <div class="nav-list">
+            <a href="#home">Home</a>
+            <div class="dropdown">
+                <div class="dropdown-btn">
+                    <a href="#news">News <i class="fa fa-caret-down"></i></a>
+                </div>
+                <div class="dropdown-list">
+                    <a href="#news">Problems</a>
+                    <a href="#overcome">Overcome</a>
+                    <a href="#sustainable-living">Sustainable Living</a>
+                </div>
+            </div>
+            <a href="#games">Games</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="vline"></div>
+        <div class="mode-switch" id="swtch">
+            <div class="switch">
+                <i class="fa fa-sun"></i>
+                <i class="fa fa-moon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- banner -->
+    <div class="banner" id="home">
+        <div class="parallax">
+            <img src="img/light/1.png" alt="" class="parallax__build1" data-light="img/light/1.png" data-dark="img/dark/1.png">
+            <img src="img/light/2.png" alt="" class="parallax__build2" data-light="img/light/2.png" data-dark="img/dark/2.png">
+            <img src="img/light/3.png" alt="" class="parallax__light1" data-light="img/light/3.png" data-dark="img/dark/3.png">
+            <img src="img/light/4.png" alt="" class="parallax__bush1" data-light="img/light/4.png" data-dark="img/dark/4.png">
+            <img src="img/light/5.png" alt="" class="parallax__build3" data-light="img/light/5.png" data-dark="img/dark/5.png">
+            <img src="img/light/6.png" alt="" class="parallax__light2" data-light="img/light/6.png" data-dark="img/dark/6.png">
+            <img src="img/light/7.png" alt="" class="parallax__train" data-light="img/light/7.png" data-dark="img/dark/7.png">
+            <img src="img/light/8.png" alt="" class="parallax__bush2" data-light="img/light/8.png" data-dark="img/dark/8.png">
+            <img src="img/logo.png" alt="" class="parallax__logo" data-light="img/logo.png" data-dark="img/logo.png">
+        </div>        
+    </div>
+
+    <div class="content"> 
+        <!-- news -->
+        <div class="container__news" id="news">
+            <h2>BREAKING NEWS</h2>
+            <div class="news1 news__openBtn1" onclick="showNews('news__content1')">
+                <div class="news__headline">
+                    <img src="img/news1.jpeg" alt="Gambar Berita 1">
+                    <div class="text">
+                        <h5>Melting Ice Caps<br>in The Arctic</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="news2 news__openBtn2" onclick="showNews('news__content2')">
+                <div class="news__headline">
+                    <div class="text">
+                        <h5>Food and Water<br>Insecurity</h5>
+                    </div>
+                    <img src="img/news2.jpg" alt="Gambar Berita 2">
+                </div>
+            </div>
+        </div>
+        
+        <!-- overcome -->
+        <div class="container__overcome" id="overcome">
+            <div class="overcome">
+                <h2>HOW DO WE OVERCOME?</h2>
+                <div class="text">
+                    <p>The recent news highlights alarming issues like topsoil erosion, water scarcity, and food waste. These crises are direct results of unsustainable practices and threaten the future of our planet. But the good news? We can make a difference by choosing to live sustainably.</p>
+                    <p><b>Why Change Matters?</b><br>
+                        Living sustainably means using resources wisely so future generations can enjoy the same opportunities we do. By reducing waste, conserving water, and rethinking how we grow and consume food, we can tackle problems like hunger, climate change, and pollution. Small actions, when multiplied, can lead to massive global change.</p>
+                    <p><b>How to Start</b></p>
+                    <ol>
+                        <li><b>Reduce Food Waste:</b> Eat “imperfect” produce, plan meals, and compost leftovers. This can cut down on the 1.3 billion tons of food wasted each year.</li>
+                        <li><b>Conserve Water:</b> Fix leaks, take shorter showers, and support policies that protect freshwater resources.</li>
+                        <li><b>Adopt Eco-friendly Habits:</b> Use less plastic, shop sustainably, and support local farmers who practice soil-friendly farming.</li>
+                        <li><b>Raise Awareness:</b> Educate others about the importance of sustainable living and advocate for systemic change.</li>
+                    </ol>
+                    <p>Sustainable living isn’t just a responsibility; it’s an opportunity to create a healthier planet for everyone. Start today—your actions matter!</p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- sustainable living -->
+        <div class="container__sl" id="sustainable-living">
+            <div class="sl">
+                <h2>SUSTAINABLE LIVING</h2>
+                <div class="text">
+                    <p>It is a way of living with the intention of having less impact on the environment by consciously reducing resource consumption and waste generation. It involves choosing renewable resources, energy efficiency, and eco-friendly activities. For instance, using solar panels, conserving water, and switching to energy-saving appliances all are measures that fall into the concept of sustainable living. This approach emanates from the very understanding that one should live within the available planetary resource limits so that future generations can also thrive equipped with the same resources without depletion.</p>
+                    <p>Living sustainably includes the adoption of a circular economy in which reduction, reuse, and recycling of materials take center stage. In this regard, it opposes the traditional linear model of consumption: take, make, and dispose. Other sustainable living practices involve composting organic waste, fixing things rather than throwing them away, and buying secondhand items. Such practices minimize waste to landfills, reduce carbon emissions, and preserve valuable resources. This approach aims at developing a system where materials and products would be constantly cycled back into use, with minimal pressure on the environment.</p>
+                    <p>Sustainable living also focuses on responsible consumption. Consuming local, seasonal, and organic foods reduces the carbon footprint related to transportation and production. Decreasing meat consumption and increasing plant-based meals can reduce emissions from livestock farming by as much as possible. Similarly, shopping more mindfully, avoiding fast fashion, and choosing sustainable brands support more ethical production methods and minimize environmental degradation.</p>
+                    <p>Community involvement also plays a major role in sustainable living. People can engage in such activities as urban gardening, carpooling, or community clean-up events. These not only reduce environmental impacts but also provide an opportunity to develop shared responsibility and a sense of interconnectedness. Governments and organizations can support these efforts by investing in public transportation infrastructure, renewable energy, and waste management systems.</p>
+                    <p>Lastly, sustainable living is a long-term frame of mind. It means taking into consideration how daily choices will affect the planet and choosing sustainability over convenience or cost. This mindset can be cultivated through education and awareness, thus empowering people to make informed choices that support environmental goals. Sustainable living is not a personal choice; it is a movement that has to be undertaken as a collective to ensure health and stability for our planet for generations to come.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- games -->
+        <div class="container__games" id="games">
+            <h3>WHY DON'T YOU TRY IT YOURSELF?</h3>
+            <div class="games">
+                <div class="game game__openBtn1" onclick="showGame('game__content1')">
+                    <div class="game1">
+                        <div class="text">
+                            <h5>TRIVIA</h5>
+                            <p>Take this trivia to test your knowledge on sustainable living so far!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="game game__openBtn2" onclick="showGame('game__content2')">
+                    <div class="game2">
+                        <div class="text">
+                            <h5>SORT YOUR TRASH!</h5>
+                            <p>Sort wastes into 3 different types!</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    
+        <!-- about -->
+        <div class="container__au" id="about">
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <h3>ABOUT</h3>
+            <div class="au">
+                <div class="text">
+                    <p>Sustainable living is about making conscious decisions that minimize our environmental impact, preserve natural resources, and create a harmonious balance between humanity and the planet. This lifestyle promotes mindful consumption, waste reduction, and respect for the ecosystems that support us all.</p>
+                    <p>At EarthMATE, we believe that sustainable living is not just a choice, but also a responsibility. Our world faces unprecedented challenges: climate change, resource depletion, biodiversity loss, and many more. By adopting sustainable practices, we can collectively mitigate these issues and secure a brighter future for generations to come.</p>
+                    <p>Sustainable living isn’t about perfection; it’s about progress. Small steps—like reducing energy consumption, choosing eco-friendly products, or supporting local, ethical businesses—can create ripples of positive change. That’s why we created EarthMATE: to encourage people to start living sustainably, starting from small steps. This platform provides the example of sorting our waste, but we promote the sustainable lifestyle all the same. Together, we can redefine our relationship with the Earth and foster a world where both people and nature thrive. Let’s make a difference—one step at a time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <h6>&copy;2024 Aretha Hartono | Rakyanestri Widyaningtyas | Yustina Gadiella Dharani. All Rights Reserved.</h6>
+        <p>SUSTAINABLE LIVING</p>
+        <p>PesonaEdu Youth Creators Competition 2024</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
