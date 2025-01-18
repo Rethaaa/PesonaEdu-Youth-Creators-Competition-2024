@@ -1,10 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 @font-face {
-    font-family: "SuperFunk";
-    src: url(SuperFunky-lgmWw.ttf);
-}
-@font-face {
-    font-family: "BabyDoll";
-    src: url(Baby\ Doll.ttf);
+    font-family: "HitnRun";
+    src: url(font/HitandRun-Regular.otf);
 }
 ::selection {
     background-color: var(--g2);
@@ -36,14 +33,10 @@
     --g2: #406346;
     --g3: #b1c897;
     --banner: #5cb3ff;
-    --scroll: #eaeaea;
+    --scroll: #cacaca;
     --bush: #43A047;
     --wave: url(img/light/wave.png);
     --logoName: url(img/logo name.png);
-    
-    /* xtra size */
-    --s: 0.75rem;
-    --xs: 0.563rem;
 }
 .darkmode {
     --clr1: #961212;
@@ -68,30 +61,41 @@
 /* font-sizes */
 h1 {
     font-size: 5.61rem;
-    font-family: "SuperFunk", sans-serif;
+    font-family: "HitnRun",  "Arial", sans-serif;
+    letter-spacing: 5px;
 }
 h2 {
     font-size: 4.209rem;
-    font-family: "SuperFunk", sans-serif;
+    font-family: "HitnRun", "Arial", sans-serif;
+    letter-spacing: 5px;
 }
 h3 {
     font-size: 3.157rem;
-    font-family: "SuperFunk", sans-serif;
+    font-family: "HitnRun", "Arial", sans-serif;
+    letter-spacing: 5px;
 }
 h4 {
     font-size: 2.369rem;
-    font-family: "SuperFunk", sans-serif;
+    font-family: "HitnRun", "Arial", sans-serif;
+    letter-spacing: 5px;
 }
 h5 {
     font-size: 1.777rem;
-    font-family: "SuperFunk", sans-serif;
+    font-family: "HitnRun", "Arial", sans-serif;
+    letter-spacing: 5px;
 }
 h6 {
     font-size: 1.333rem;
-    font-family: "SuperFunk", sans-serif;
+    font-family: "HitnRun", "Arial", sans-serif;
+    letter-spacing: 5px;
 }
-p, li, b {
-    font-size: 1.333rem;
+p, li {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+b {
+    font-size: 1.2rem;
+    font-weight: 1000;
     text-align: justify;
 }
 .text {
@@ -151,7 +155,7 @@ p, li, b {
 }
 body {
     background-color: var(--bg);
-    font-family: "BabyDoll", sans-serif;
+    font-family: "Short Stack", "Arial", sans-serif;
     overflow-x: hidden;
     transition: all ease 0.3s;
 }
@@ -169,7 +173,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 50;
+    z-index: 99;
     animation: appear 0.3s linear;
 }
 .logo {
@@ -179,7 +183,6 @@ nav {
 .logo img {
     flex-shrink: 0;
     height: 45px;
-    /* border: 2px solid var(--g1); */
 }
 .logoName {
     width: 100%;
@@ -192,7 +195,6 @@ nav {
     align-items: center;
     gap: 20px;
     background: transparent;
-    z-index: 50;
 }
 .nav-list a {
     text-decoration: none;
@@ -203,7 +205,7 @@ nav {
     transition: all ease 0.3s;
 }
 .nav-list a, .dropdown-btn {
-    z-index: 51;
+    z-index: 100;
 }
 .nav-list a:hover {
     color: var(--white);
@@ -219,17 +221,19 @@ nav {
 .dropdown-list {
     display: none;
     position: absolute;
-    padding: 43.5px;
+    padding: 45.5px;
     background-color: transparent;
     transition: all ease 0.3s;
-    z-index: 30;
+    z-index: 98;
 }
 .dropdown-list a {
     display: block;
     color: var(--g1);
     background-color: var(--white);
+    margin-top: -2px;
     padding: 20px 40px 20px 10px;
     border-radius: 0;
+    border: 2px solid var(--g1);
 }
 .dropdown-list a:hover {
     background-color: var(--g1);
@@ -324,7 +328,7 @@ nav {
     position: absolute;
 }
 .parallax__bush1 {
-    --parallax-speed: 3;
+    --parallax-speed: 2.5;
     z-index: 2;
     position: absolute;
 }
@@ -344,7 +348,7 @@ nav {
     position: absolute;
 }
 .parallax__bush2 {
-    --parallax-speed: 0;
+    --parallax-speed: -1;
     z-index: 8;
     position: absolute;
 }
@@ -352,6 +356,15 @@ nav {
     --parallax-speed: 3;
     z-index: 6;
     position: absolute;
+}
+.parallax__bush-block {
+    position: absolute;
+    background-color: var(--bush);
+    width: 100%;
+    height: 500px;
+    z-index: 8;
+    bottom: -490px;
+    --parallax-speed: -1;
 }
 @keyframes parallax {
     to {
@@ -368,8 +381,6 @@ nav {
 .container__news, .container__overcome, .container__sl {
     background-color: var(--bush);
     color: #fff;
-    /* width: 100%; */
-    /* height: 730px; */
     margin-top: -10px;
     padding: 100px;
     display: flex;
@@ -379,6 +390,12 @@ nav {
     p  {
         text-align: justify;
     }
+}
+.container__overcome {
+    background: linear-gradient(var(--bush), var(--white) 30%);
+}
+.container__sl {
+    background: linear-gradient(180deg, var(--white) 70%, var(--bush) 100%);
 }
 .news1, .news2 {
     padding: 30px 50px;
@@ -405,7 +422,7 @@ nav {
     align-self: flex-end;
     animation: slideLeft 0.3s linear;
     animation-timeline: view();
-    animation-range: entry 0 cover 45%;
+    animation-range: entry 0 cover 15%;
 }
 .news__headline {
     display: flex;
@@ -424,36 +441,8 @@ nav {
     width: 100%;
     height: 100%;
     color: #fff;
-    z-index: 100;
+    z-index: 200;
     display: none;
-}
-.news__content1{
-    background-color: var(--clr1);
-}
-.news__content2{
-    background-color: var(--clr2);
-}
-.news__closeBtn {
-    background-color: var(--white);
-    color: var(--black);
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid var(--black);
-    top: 5px;
-    right: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all ease 0.3s;
-    z-index: 50;
-}
-.news__closeBtn:hover {
-    background-color: #9d9d9d;
-}
-.news__content {
     width: 100%;
     max-height: 100%;
     display: none;
@@ -466,6 +455,32 @@ nav {
         text-align: center;
     }
 }
+.news__content1{
+    background-color: var(--clr1);
+}
+.news__content2{
+    background-color: var(--clr2);
+}
+.news__closeBtn {
+    background-color: var(--white);
+    color: var(--black);
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--black);
+    top: 35px;
+    right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    z-index: 2001;
+}
+.news__closeBtn:hover {
+    background-color: #9d9d9d;
+}
 .newsContent {
     display: flex;
     flex-direction: column;
@@ -476,9 +491,9 @@ nav {
     text-align: center;
 }
 .newsContent img {
-    width: 100%; /* Adjust the image to fit within the scrollable area */
-    max-width: 500px; /* Limit the image size */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 .newsContent a {
     color: #fff;
@@ -491,17 +506,20 @@ nav {
     border-radius: 50px;
     animation: slideLeft 0.3s linear;
     animation-timeline: view();
-    animation-range: entry 0 cover 40%;
+    animation-range: entry 0 cover 35%;
 }
 
 /* sustainable living */
 .sl {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     background-color: var(--clr5);
     padding: 50px 70px;
     border-radius: 50px;
     animation: slideRight 0.3s linear;
     animation-timeline: view();
-    animation-range: entry 0 cover 40%;
+    animation-range: entry 0 cover 30%;
 }
 
 /* games */
@@ -509,8 +527,6 @@ nav {
     position: relative;
     background: var(--bush);
     color: #fff;
-    /* width: 100%; */
-    /* height: 730px; */
     padding: 100px 100px 235px 100px;
     display: flex;
     flex-direction: column;
@@ -554,13 +570,13 @@ nav {
 .game__closeBtn {
     background-color: var(--white);
     color: var(--black);
-    position: absolute;
+    position: fixed;
     width: 35px;
     height: 35px;
     border-radius: 50%;
     border: 2px solid var(--black);
-    top: -15px;
-    right: -15px;
+    top: 35px;
+    right: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -600,11 +616,14 @@ nav {
 #quiz {
     max-width: 75%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 #quiz div {
     font-size: 1.5rem;
 }
-#quiz h1 {
+#quiz h2 {
     text-align: center;
     color: #fff;
 }
@@ -631,102 +650,11 @@ nav {
     border: none;
     border-radius: 99px;
     cursor: pointer;
-    font-family: "BabyDoll", sans-serif;
+    font-family: "Short Stack", "Arial", sans-serif;
 }
 #quiz button:hover {
     background-color: var(--g1);
     color: var(--g3);
-}
-
-/* sort waste */
-#game-container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-}
-  
-.hidden {
-    display: none;
-}
-  
-#trash-cans {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-    gap: 20px;
-}
-  
-.trash-can {
-    width: 120px;
-    height: 120px;
-    border: 3px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    line-height: 120px;
-    background-color: #ffffff;
-    font-size: 1.2em;
-}
-  
-#trash-container {
-    height: 300px;
-    margin: 20px 0;
-    position: relative;
-}
-  
-.trash {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    cursor: grab;
-    user-select: none;
-    text-align: center;
-    line-height: 70px;
-    font-size: 2em;
-    transition: transform 0.2s;
-}
-  
-#scoreboard {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-    font-size: 1.2em;
-}
-  
-#high-score {
-    font-weight: bold;
-    color: #4caf50;
-}
-  
-#score {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-  
-#timer {
-    margin-top: 10px;
-    font-size: 1.2em;
-}
-  
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-#message-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 20px 40px;
-    border-radius: 10px;
-    font-size: 2em;
-    z-index: 20;
-    text-align: center;
 }
 
 /* about us */
@@ -734,8 +662,6 @@ nav {
     position: relative;
     background: var(--white);
     color: var(--black);
-    /* width: 100%; */
-    /* height: 730px; */
     padding: 0 100px 100px 100px;
     display: flex;
     flex-direction: column;
@@ -746,13 +672,19 @@ nav {
     }
 }
 .au {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    animation: appear 0.3s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 45%;
+}
+.au__box {
     background-color: var(--clr7);
     padding: 50px 70px;
     border-radius: 50px;
     color: #fff;
-    animation: appear 0.3s linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 45%;
 }
 /* waves */
 .wave{
@@ -818,9 +750,11 @@ footer {
     gap: 1rem;
     p {
         color: #fff;
+        text-align: center;
     }
-    h6 {
-        font-family: "BabyDoll", sans-serif;
+    p.copy{
+        letter-spacing: 3px;
         color: #fff;
+        font-weight: 1000;
     }
 }
