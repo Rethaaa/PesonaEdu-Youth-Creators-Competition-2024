@@ -6,12 +6,12 @@
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="img/logo planet.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <title>PesonaEdu - Youth Creators Competion 2024</title>
+        <title>PesonaEdu - Young Creators Competion 2024</title>
     </head>
 <body>
     <!-- news content -->
     <div class="news__content news__content1">
-        <div class="news__closeBtn" onclick="hideNews('news__content1')"><p>×</p></div>
+        <div class="news__closeBtn" onclick="hideNews('news__content1')">×</div>
         <div class="newsContent">
             <h5>Melting Ice Caps in The Arctic</h5>
             <img src="img/news1.jpeg" alt="Image for 1st news" class="newsContent__img">
@@ -45,46 +45,9 @@
         <div class="game__closeBtn" onclick="hideGame('game__content1')"><p>×</p></div>
         <div class="gameContent">
             <div id="quiz">
-                <h1>Trivia</h1>
+                <h2>Trivia</h2>
                 <div id="question"></div>
                 <div id="options"></div>
-            </div>
-        </div>
-    </div>
-    <div class="game__content game__content2">
-        <div class="game__closeBtn" onclick="hideGame('game__content2')"><p>×</p></div>
-        <div class="gameContent">
-            <div id="game-container">
-                <div id="tutorial" class="hidden">
-                    <p><strong>How to Play:</strong></p>
-                    <p>Drag the trash into the correct bin:</p>
-                    <ul>
-                        <li><strong>Organic:</strong> 🍎, 🍌</li>
-                        <li><strong>Inorganic:</strong> 🧴, 🥤</li>
-                        <li><strong>Toxic:</strong> ☣️, 💉</li>
-                    </ul>
-                    <button id="start-button">Start Game</button>
-                </div>
-                <div id="game" class="hidden">
-                    <div id="scoreboard">
-                        <div id="score">Score: 0</div>
-                        <div id="high-score">High Score: 0</div>
-                        <div id="timer">Time Left: 30s</div>
-                    </div>
-                    <div id="trash-cans">
-                        <div class="trash-can" data-type="organic"><img src="img/organik/tong organik.png" alt="organic"></div>
-                        <div class="trash-can" data-type="inorganic"><img src="img/nonorganik/tong nonorganik.png" alt="inorganic"></div>
-                        <div class="trash-can" data-type="toxic"><img src="img/b3/tong b3.png" alt="toxic"></div>
-                    </div>
-                    <div id="trash-container"></div>
-                    <div id="timer"></div>
-                </div>
-                <div id="game-over" class="hidden">
-                    <h1>Game Over</h1>
-                    <p id="final-score"></p>
-                    <p id="high-score-final"></p>
-                    <button onclick="restartGame()">Restart</button>
-                </div>    
             </div>
         </div>
     </div>
@@ -122,7 +85,7 @@
 
     <!-- banner -->
     <div class="banner" id="home">
-        <div class="parallax">
+        <div classa="parallax">
             <img src="img/light/1.png" alt="" class="parallax__build1" data-light="img/light/1.png" data-dark="img/dark/1.png">
             <img src="img/light/2.png" alt="" class="parallax__build2" data-light="img/light/2.png" data-dark="img/dark/2.png">
             <img src="img/light/3.png" alt="" class="parallax__light1" data-light="img/light/3.png" data-dark="img/dark/3.png">
@@ -131,6 +94,7 @@
             <img src="img/light/6.png" alt="" class="parallax__light2" data-light="img/light/6.png" data-dark="img/dark/6.png">
             <img src="img/light/7.png" alt="" class="parallax__train" data-light="img/light/7.png" data-dark="img/dark/7.png">
             <img src="img/light/8.png" alt="" class="parallax__bush2" data-light="img/light/8.png" data-dark="img/dark/8.png">
+            <div class="parallax__bush-block"></div>
             <img src="img/logo.png" alt="" class="parallax__logo" data-light="img/logo.png" data-dark="img/logo.png">
         </div>        
     </div>
@@ -205,14 +169,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="game game__openBtn2" onclick="showGame('game__content2')">
-                    <div class="game2">
-                        <div class="text">
-                            <h5>SORT YOUR TRASH!</h5>
-                            <p>Sort wastes into 3 different types!</p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     
@@ -224,12 +180,14 @@
                 <div class="wave" id="wave3"></div>
                 <div class="wave" id="wave4"></div>
             </div>
-            <h3>ABOUT</h3>
             <div class="au">
-                <div class="text">
-                    <p>Sustainable living is about making conscious decisions that minimize our environmental impact, preserve natural resources, and create a harmonious balance between humanity and the planet. This lifestyle promotes mindful consumption, waste reduction, and respect for the ecosystems that support us all.</p>
-                    <p>At EarthMATE, we believe that sustainable living is not just a choice, but also a responsibility. Our world faces unprecedented challenges: climate change, resource depletion, biodiversity loss, and many more. By adopting sustainable practices, we can collectively mitigate these issues and secure a brighter future for generations to come.</p>
-                    <p>Sustainable living isn’t about perfection; it’s about progress. Small steps—like reducing energy consumption, choosing eco-friendly products, or supporting local, ethical businesses—can create ripples of positive change. That’s why we created EarthMATE: to encourage people to start living sustainably, starting from small steps. This platform provides the example of sorting our waste, but we promote the sustainable lifestyle all the same. Together, we can redefine our relationship with the Earth and foster a world where both people and nature thrive. Let’s make a difference—one step at a time.</p>
+                <h3>ABOUT</h3>
+                <div class="au__box">
+                    <div class="text">
+                        <p>Sustainable living is about making conscious decisions that minimize our environmental impact, preserve natural resources, and create a harmonious balance between humanity and the planet. This lifestyle promotes mindful consumption, waste reduction, and respect for the ecosystems that support us all.</p>
+                        <p>At EarthMATE, we believe that sustainable living is not just a choice, but also a responsibility. Our world faces unprecedented challenges: climate change, resource depletion, biodiversity loss, and many more. By adopting sustainable practices, we can collectively mitigate these issues and secure a brighter future for generations to come.</p>
+                        <p>Sustainable living isn’t about perfection; it’s about progress. Small steps—like reducing energy consumption, choosing eco-friendly products, or supporting local, ethical businesses—can create ripples of positive change. That’s why we created EarthMATE: to encourage people to start living sustainably, starting from small steps. This platform provides the example of sorting our waste, but we promote the sustainable lifestyle all the same. Together, we can redefine our relationship with the Earth and foster a world where both people and nature thrive. Let’s make a difference—one step at a time.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -237,9 +195,9 @@
 
     <!-- footer -->
     <footer>
-        <h6>&copy;2024 Aretha Hartono | Rakyanestri Widyaningtyas | Yustina Gadiella Dharani. All Rights Reserved.</h6>
+        <p class="copy">&copy;2025 Aretha Hartono | Rakyanestri Widyaningtyas | Yustina Gadiella Dharani. <br> All Rights Reserved.</p>
         <p>SUSTAINABLE LIVING</p>
-        <p>PesonaEdu Youth Creators Competition 2024</p>
+        <p>PesonaEdu Young Creators Competition 2024</p>
     </footer>
     
     <script src="script.js"></script>
